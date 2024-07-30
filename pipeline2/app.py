@@ -3,8 +3,8 @@ import os
 
 def main():
     parser = argparse.ArgumentParser(description='Generate a text file with repeated strings.')
-    parser.add_argument('str_amount', type=int, help='Number of "hello world" strings to write.')
-    parser.add_argument('output_path', type=str, help='Path to the output file.')
+    parser.add_argument('--str_amount', type=int, required=True, help='Number of "hello world" strings to write.')
+    parser.add_argument('--output_path', type=str, required=True, help='Path to the output file.')
     args = parser.parse_args()
 
     # Ensure the directory for the output file exists
