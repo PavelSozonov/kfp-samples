@@ -10,7 +10,7 @@ def main():
     # Ensure the directory for the output file exists
     output_dir = os.path.dirname(args.output_path)
     if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
+        os.makedirs(output_dir, exist_ok=True)
 
     # Write the specified number of "hello world" strings to the output file
     with open(args.output_path, 'w') as f:
